@@ -1,0 +1,257 @@
+{
+  "conselho_federal": {
+    "sigla": "CFP",
+    "nome": "Conselho Federal de Psicologia",
+    "site": "https://site.cfp.org.br",
+    "email": "presidencia@cfp.org.br",
+    "telefone": "(61) 2109-0100",
+    "endereco": "SAF/SUL Quadra 2, Bloco B, Edifício Via Office, Terreo, Sala 104, Brasilia - DF, CEP 70070-600",
+    "canais_denuncia": "Cada denúncia deve ser feita ao Conselho Regional do estado onde o profissional atua ou onde ocorreu o fato. O CFP atua como instância recursal (2ª instância)."
+  },
+  "regionais": [
+    {
+      "sigla": "CRP-01",
+      "nome": "Conselho Regional de Psicologia da 1ª Região",
+      "abrangencia": "Distrito Federal",
+      "site": "https://www.crp-01.org.br",
+      "email": "crp01@crp-01.org.br",
+      "telefone": "(61) 3322-4555",
+      "estados": ["DF"]
+    },
+    {
+      "sigla": "CRP-02",
+      "nome": "Conselho Regional de Psicologia da 2ª Região",
+      "abrangencia": "Pernambuco",
+      "site": "https://www.crp02.org.br",
+      "email": "crp02@crp02.org.br",
+      "telefone": "(81) 3421-2628",
+      "estados": ["PE"]
+    },
+    {
+      "sigla": "CRP-03",
+      "nome": "Conselho Regional de Psicologia da 3ª Região",
+      "abrangencia": "Bahia",
+      "site": "https://crp03.org.br",
+      "email": "atendimento@crp03.org.br",
+      "telefone": "(71) 3243-8000",
+      "estados": ["BA"]
+    },
+    {
+      "sigla": "CRP-04",
+      "nome": "Conselho Regional de Psicologia da 4ª Região",
+      "abrangencia": "Minas Gerais",
+      "site": "https://www.crp04.org.br",
+      "email": "crp04@crp04.org.br",
+      "telefone": "(31) 3241-4916",
+      "estados": ["MG"]
+    },
+    {
+      "sigla": "CRP-05",
+      "nome": "Conselho Regional de Psicologia da 5ª Região",
+      "abrangencia": "Rio de Janeiro",
+      "site": "https://www.crprj.org.br",
+      "email": "crp05@crprj.org.br",
+      "telefone": "(21) 2137-7100",
+      "estados": ["RJ"]
+    },
+    {
+      "sigla": "CRP-06",
+      "nome": "Conselho Regional de Psicologia da 6ª Região",
+      "abrangencia": "São Paulo",
+      "site": "https://www.crpsp.org",
+      "email": "atendimento@crpsp.org.br",
+      "telefone": "(11) 3061-9494",
+      "estados": ["SP"]
+    },
+    {
+      "sigla": "CRP-07",
+      "nome": "Conselho Regional de Psicologia da 7ª Região",
+      "abrangencia": "Rio Grande do Sul",
+      "site": "https://www.crprs.org.br",
+      "email": "crp7@crprs.org.br",
+      "telefone": "(51) 3334-6799",
+      "estados": ["RS"]
+    },
+    {
+      "sigla": "CRP-08",
+      "nome": "Conselho Regional de Psicologia da 8ª Região",
+      "abrangencia": "Paraná",
+      "site": "https://www.crppr.org.br",
+      "email": "crp08@crppr.org.br",
+      "telefone": "(41) 3013-5800",
+      "estados": ["PR"]
+    },
+    {
+      "sigla": "CRP-09",
+      "nome": "Conselho Regional de Psicologia da 9ª Região",
+      "abrangencia": "Goiás",
+      "site": "https://www.crp09.org.br",
+      "email": "crp09@crp09.org.br",
+      "telefone": "(62) 3251-0909",
+      "estados": ["GO"]
+    },
+    {
+      "sigla": "CRP-10",
+      "nome": "Conselho Regional de Psicologia da 10ª Região",
+      "abrangencia": "Pará e Amapá",
+      "site": "https://www.crp10.org.br",
+      "email": "crp10@crp10.org.br",
+      "telefone": "(91) 3084-1524",
+      "estados": ["PA", "AP"]
+    },
+    {
+      "sigla": "CRP-11",
+      "nome": "Conselho Regional de Psicologia da 11ª Região",
+      "abrangencia": "Ceará",
+      "site": "https://www.crp11.org.br",
+      "email": "crp11@crp11.org.br",
+      "telefone": "(85) 3272-2800",
+      "estados": ["CE"]
+    },
+    {
+      "sigla": "CRP-12",
+      "nome": "Conselho Regional de Psicologia da 12ª Região",
+      "abrangencia": "Santa Catarina",
+      "site": "https://www.crpsc.org.br",
+      "email": "atendimento@crpsc.org.br",
+      "telefone": "(48) 3223-8282",
+      "estados": ["SC"]
+    },
+    {
+      "sigla": "CRP-13",
+      "nome": "Conselho Regional de Psicologia da 13ª Região",
+      "abrangencia": "Paraíba",
+      "site": "https://www.crp13.org.br",
+      "email": "crp13@crp13.org.br",
+      "telefone": "(83) 3222-3377",
+      "estados": ["PB"]
+    },
+    {
+      "sigla": "CRP-14",
+      "nome": "Conselho Regional de Psicologia da 14ª Região",
+      "abrangencia": "Mato Grosso do Sul",
+      "site": "https://www.crp14.org.br",
+      "email": "crp14@crp14.org.br",
+      "telefone": "(67) 3325-0014",
+      "estados": ["MS"]
+    },
+    {
+      "sigla": "CRP-15",
+      "nome": "Conselho Regional de Psicologia da 15ª Região",
+      "abrangencia": "Alagoas",
+      "site": "https://www.crp15.org.br",
+      "email": "crp15@crp15.org.br",
+      "telefone": "(82) 3221-5110",
+      "estados": ["AL"]
+    },
+    {
+      "sigla": "CRP-16",
+      "nome": "Conselho Regional de Psicologia da 16ª Região",
+      "abrangencia": "Espírito Santo",
+      "site": "https://www.crp16.org.br",
+      "email": "atendimento@crp16.org.br",
+      "telefone": "(27) 3222-2516",
+      "estados": ["ES"]
+    },
+    {
+      "sigla": "CRP-17",
+      "nome": "Conselho Regional de Psicologia da 17ª Região",
+      "abrangencia": "Rio Grande do Norte",
+      "site": "https://crp17.org.br",
+      "email": "crp17@crp17.org.br",
+      "telefone": "(84) 3211-3100",
+      "estados": ["RN"]
+    },
+    {
+      "sigla": "CRP-18",
+      "nome": "Conselho Regional de Psicologia da 18ª Região",
+      "abrangencia": "Mato Grosso",
+      "site": "https://crpmt.org.br",
+      "email": "crp18@crpmt.org.br",
+      "telefone": "(65) 3623-6000",
+      "estados": ["MT"]
+    },
+    {
+      "sigla": "CRP-19",
+      "nome": "Conselho Regional de Psicologia da 19ª Região",
+      "abrangencia": "Sergipe",
+      "site": "https://www.crp19.org.br",
+      "email": "atendimento@crp19.org.br",
+      "telefone": "(79) 3211-7555",
+      "estados": ["SE"]
+    },
+    {
+      "sigla": "CRP-20",
+      "nome": "Conselho Regional de Psicologia da 20ª Região",
+      "abrangencia": "Amazonas, Acre, Rondônia e Roraima",
+      "site": "https://www.crp20.org.br",
+      "email": "atendimento@crp20.org.br",
+      "telefone": "(92) 3307-1000",
+      "estados": ["AM", "AC", "RO", "RR"]
+    },
+    {
+      "sigla": "CRP-21",
+      "nome": "Conselho Regional de Psicologia da 21ª Região",
+      "abrangencia": "Piauí e Maranhão",
+      "site": "https://www.crp21.org.br",
+      "email": "crp21@crp21.org.br",
+      "telefone": "(86) 3222-6921",
+      "estados": ["PI", "MA"]
+    },
+    {
+      "sigla": "CRP-22",
+      "nome": "Conselho Regional de Psicologia da 22ª Região",
+      "abrangencia": "Tocantins",
+      "site": "https://www.crp22.org.br",
+      "email": "crp22@crp22.org.br",
+      "telefone": "(63) 3215-2222",
+      "estados": ["TO"]
+    },
+    {
+      "sigla": "CRP-23",
+      "nome": "Conselho Regional de Psicologia da 23ª Região",
+      "abrangencia": "Rondônia... (reestruturado, hoje integra CRP-20)",
+      "site": "https://www.crp20.org.br",
+      "email": "atendimento@crp20.org.br",
+      "telefone": "(92) 3307-1000",
+      "estados": ["RO"],
+      "observacao": "O CRP-23 foi reestruturado. A região de Rondônia passou a integrar o CRP-20."
+    }
+  ],
+  "orientacao_denuncia": {
+    "introducao": "IMPORTANTE: Esta ferramenta NÃO determina que houve infração ética. Essa decisão cabe exclusivamente ao Conselho Regional de Psicologia, após processo ético-disciplinar com direito ao contraditório e ampla defesa.",
+    "passos": [
+      {
+        "passo": 1,
+        "titulo": "Preserve as evidências",
+        "descricao": "Salve prints (capturas de tela) de toda a publicação. Inclua a data, horário, URL (link), nome do autor e todas as interações visíveis (curtidas, comentários, compartilhamentos). Grave a tela se possível. Não confie que a publicação continuará disponível — o autor pode apagá-la a qualquer momento."
+      },
+      {
+        "passo": 2,
+        "titulo": "Reúna informações do profissional",
+        "descricao": "Anote o nome completo da pessoa que fez a publicação, o número do CRP (se visível no perfil), a cidade e o estado de atuação."
+      },
+      {
+        "passo": 3,
+        "titulo": "Identifique o CRP responsável",
+        "descricao": "A denúncia deve ser feita ao Conselho Regional do estado onde o profissional atua. Use a busca por estado nesta ferramenta para encontrar o CRP correto."
+      },
+      {
+        "passo": 4,
+        "titulo": "Formalize a denúncia",
+        "descricao": "Cada CRP possui um canal específico para recebimento de denúncias (presencial, por e-mail ou formulário online). Visite o site do CRP correspondente e procure por 'Denúncia', 'Ouvidoria', 'Comissão de Ética' ou 'COE' (Comissão de Orientação e Ética)."
+      },
+      {
+        "passo": 5,
+        "titulo": "Anexe a documentação",
+        "descricao": "Junte prints, links, transcrições e qualquer outro material que comprove a publicação. Descreva com clareza: o que foi publicado, onde, quando, por quem, e por que você considera que o conteúdo pode violar o Código de Ética."
+      },
+      {
+        "passo": 6,
+        "titulo": "Acompanhe o processo",
+        "descricao": "Após protocolar a denúncia, o CRP abrirá um procedimento preliminar. Você poderá ser chamado(a) para prestar esclarecimentos. A denúncia pode resultar em: arquivamento, conciliação, advertência, suspensão ou cassação do registro profissional."
+      }
+    ],
+    "ressalva_final": "RELEMBRANDO: Esta ferramenta é um orientador, não um julgador. Apenas os Conselhos Regionais de Psicologia, após processo ético com direito à defesa, podem decidir se houve infração. Se você foi pessoalmente atingido(a), considere também buscar orientação jurídica."
+  }
+}

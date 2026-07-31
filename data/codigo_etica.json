@@ -1,0 +1,253 @@
+{
+  "documento": "Código de Ética Profissional do Psicólogo",
+  "norma": "Resolução CFP nº 010/2005",
+  "artigos": [
+    {
+      "id": "Art. 1º",
+      "tipo": "Deveres Fundamentais",
+      "itens": [
+        {
+          "letra": "b",
+          "texto": "Assumir responsabilidades profissionais somente por atividades para as quais esteja capacitado pessoal, teórica e tecnicamente."
+        },
+        {
+          "letra": "c",
+          "texto": "Prestar serviços psicológicos de qualidade, em condições de trabalho dignas e apropriadas à natureza desses serviços, utilizando princípios, conhecimentos e técnicas reconhecidamente fundamentados na ciência psicológica, na ética e na legislação profissional."
+        },
+        {
+          "letra": "d",
+          "texto": "Prestar serviços profissionais em situações de calamidade pública ou de emergência, sem visar benefício pessoal."
+        },
+        {
+          "letra": "e",
+          "texto": "Estabelecer acordos de prestação de serviços que respeitem os direitos do usuário ou beneficiário de serviços de Psicologia."
+        },
+        {
+          "letra": "f",
+          "texto": "Fornecer, a quem de direito, na prestação de serviços psicológicos, informações concernentes ao trabalho a ser realizado e ao seu objetivo profissional."
+        },
+        {
+          "letra": "g",
+          "texto": "Informar, a quem de direito, os resultados decorrentes da prestação de serviços psicológicos, transmitindo somente o que for necessário para a tomada de decisões que afetem o usuário ou beneficiário."
+        },
+        {
+          "letra": "h",
+          "texto": "Orientar a quem de direito sobre os encaminhamentos apropriados, a partir da prestação de serviços psicológicos, e fornecer, sempre que solicitado, os documentos pertinentes ao bom termo do trabalho."
+        },
+        {
+          "letra": "i",
+          "texto": "Zelar para que a comercialização, aquisição, doação, empréstimo, guarda e forma de divulgação do material privativo do psicólogo sejam feitas conforme os princípios deste Código."
+        },
+        {
+          "letra": "j",
+          "texto": "Ter, para com o trabalho dos psicólogos e de outros profissionais, respeito, consideração e solidariedade, e, quando solicitado, colaborar com estes, salvo impedimento por motivo relevante."
+        },
+        {
+          "letra": "k",
+          "texto": "Sugerir serviços de outros psicólogos, sempre que, por motivos justificáveis, não puderem ser continuados pelo profissional que os assumiu inicialmente, fornecendo ao seu substituto as informações necessárias à continuidade do trabalho."
+        },
+        {
+          "letra": "l",
+          "texto": "Levar ao conhecimento das instâncias competentes o exercício ilegal ou irregular da profissão, transgressões a princípios e diretrizes deste Código ou da legislação profissional."
+        }
+      ]
+    },
+    {
+      "id": "Art. 2º",
+      "tipo": "Vedações",
+      "itens": [
+        {
+          "letra": "a",
+          "texto": "Praticar ou ser conivente com quaisquer atos que caracterizem negligência, discriminação, exploração, violência, crueldade ou opressão."
+        },
+        {
+          "letra": "b",
+          "texto": "Induzir a convicções políticas, filosóficas, morais, ideológicas, religiosas, de orientação sexual ou a qualquer tipo de preconceito, quando do exercício de suas funções profissionais."
+        },
+        {
+          "letra": "c",
+          "texto": "Utilizar ou favorecer o uso de conhecimento e a utilização de práticas psicológicas como instrumentos de castigo, tortura ou qualquer forma de violência."
+        },
+        {
+          "letra": "d",
+          "texto": "Acumpliciar-se com pessoas ou organizações que exerçam ou favoreçam o exercício ilegal da profissão de psicólogo ou de qualquer outra atividade profissional."
+        },
+        {
+          "letra": "e",
+          "texto": "Ser conivente com erros, faltas éticas, violação de direitos, crimes ou contravenções penais praticados por psicólogos na prestação de serviços profissionais."
+        },
+        {
+          "letra": "f",
+          "texto": "Prestar serviços ou vincular o título de psicólogo a serviços de atendimento psicológico cujos procedimentos, técnicas e meios não estejam regulamentados ou reconhecidos pela profissão."
+        },
+        {
+          "letra": "g",
+          "texto": "Emitir documentos sem fundamentação e qualidade técnico-científica."
+        },
+        {
+          "letra": "h",
+          "texto": "Interferir na validade e fidedignidade de instrumentos e técnicas psicológicas, adulterar seus resultados ou fazer declarações falsas."
+        },
+        {
+          "letra": "i",
+          "texto": "Induzir qualquer pessoa ou organização a recorrer a seus serviços."
+        },
+        {
+          "letra": "j",
+          "texto": "Estabelecer com a pessoa atendida, familiar ou terceiro, que tenha vínculo com o atendido, relação que possa interferir negativamente nos objetivos do serviço prestado."
+        },
+        {
+          "letra": "k",
+          "texto": "Apropriar-se de bens ou valores do usuário ou beneficiário dos serviços prestados."
+        },
+        {
+          "letra": "l",
+          "texto": "Desviar para serviço particular ou de outra instituição, visando benefício próprio, pessoas ou organizações atendidas por instituição com a qual mantenha qualquer tipo de vínculo."
+        },
+        {
+          "letra": "m",
+          "texto": "Prestar serviços profissionais a organizações concorrentes de modo a prejudicar os interesses de uma das partes, resguardando-se o sigilo profissional."
+        },
+        {
+          "letra": "n",
+          "texto": "Prolongar, desnecessariamente, a prestação de serviços profissionais."
+        },
+        {
+          "letra": "o",
+          "texto": "Pleitear ou receber comissões, empréstimos, doações ou vantagens outras de qualquer espécie, além dos honorários contratados, assim como intermediar transações financeiras."
+        },
+        {
+          "letra": "p",
+          "texto": "Receber, pagar remuneração ou porcentagem por encaminhamento de serviços."
+        },
+        {
+          "letra": "q",
+          "texto": "Realizar diagnósticos, divulgar procedimentos ou apresentar resultados de serviços psicológicos em meios de comunicação, de forma a expor pessoas, grupos ou organizações."
+        },
+        {
+          "letra": "r",
+          "texto": "Estabelecer relação profissional com quem já tenha vínculo anterior de outra natureza, que possa afetar a qualidade dos serviços prestados ou gerar conflitos de interesses."
+        },
+        {
+          "letra": "s",
+          "texto": "Fornecer, a pessoas ou organizações não autorizadas ou não competentes, informações sobre serviços prestados que possam identificar o usuário ou o beneficiário dos serviços, salvo em casos previstos em lei."
+        }
+      ]
+    },
+    {
+      "id": "Art. 3º",
+      "tipo": "Vedações adicionais",
+      "itens": [
+        {
+          "letra": "a",
+          "texto": "Desrespeitar a legislação em vigor relacionada à prestação de serviços psicológicos."
+        },
+        {
+          "letra": "b",
+          "texto": "Estabelecer vínculo ou relação profissional com usuário de serviços de Psicologia que interfira na qualidade dos serviços, nos laudos, pareceres ou relatórios."
+        }
+      ]
+    },
+    {
+      "id": "Art. 6º",
+      "tipo": "Deveres nas relações com a categoria",
+      "itens": [
+        {
+          "letra": "a",
+          "texto": "Fornecer, a quem de direito e por justa causa, informações sobre serviços profissionais prestados, resguardando o caráter confidencial das comunicações."
+        },
+        {
+          "letra": "b",
+          "texto": "Manter arquivos dos documentos e dados relativos aos serviços prestados, pelo prazo estipulado em legislação."
+        },
+        {
+          "letra": "c",
+          "texto": "Colaborar com os Conselhos Regionais de Psicologia, prestando informações sobre o exercício profissional quando solicitado."
+        }
+      ]
+    },
+    {
+      "id": "Art. 7º",
+      "tipo": "Relações com a categoria",
+      "itens": [
+        {
+          "letra": "único",
+          "texto": "O psicólogo poderá intervir na prestação de serviços psicológicos que estejam sendo efetuados por outro profissional, nas seguintes situações: a) a pedido do profissional responsável pelo serviço; b) em caso de emergência ou risco ao beneficiário ou usuário do serviço, quando dará imediata ciência ao profissional; c) quando informado expressamente, por qualquer uma das partes, da interrupção voluntária e definitiva do serviço; d) quando se tratar de trabalho multiprofissional e a intervenção fizer parte da metodologia adotada."
+        }
+      ]
+    },
+    {
+      "id": "Art. 8º",
+      "tipo": "Sigilo profissional",
+      "itens": [
+        {
+          "letra": "único",
+          "texto": "É dever do psicólogo respeitar o sigilo profissional a fim de proteger, por meio da confidencialidade, a intimidade das pessoas, grupos ou organizações, a que tenha acesso no exercício profissional."
+        }
+      ]
+    },
+    {
+      "id": "Art. 9º",
+      "tipo": "Limites do sigilo",
+      "itens": [
+        {
+          "letra": "único",
+          "texto": "O sigilo profissional poderá ser quebrado somente por justa causa, na prestação de serviços de psicologia, conforme previsto neste Código e em legislação pertinente."
+        }
+      ]
+    },
+    {
+      "id": "Art. 19",
+      "tipo": "Comunicação pública",
+      "itens": [
+        {
+          "letra": "caput",
+          "texto": "O psicólogo, ao promover publicamente seus serviços, por quaisquer meios, individual ou coletivamente, não utilizará o preço como forma de propaganda."
+        },
+        {
+          "letra": "parágrafo único",
+          "texto": "A divulgação de serviços psicológicos deverá ter caráter informativo e observar as seguintes diretrizes: a) expor o nome completo do psicólogo, acrescido da expressão 'Psicólogo' e o número de sua inscrição no CRP; b) mencionar o número de registro da pessoa jurídica no CRP quando da divulgação de serviços por esta realizada; c) informar a orientação ou qualificação profissional; d) informar o número de inscrição em cadastros especializados; e) não fazer promessas de resultados ou garantias de qualquer natureza; f) não utilizar termos que sugiram superioridade, exclusividade ou favorecimento em relação a outros profissionais; g) não utilizar denominações ou títulos que induzam ao erro sobre sua identidade profissional."
+        }
+      ]
+    },
+    {
+      "id": "Art. 20",
+      "tipo": "Divulgação pública",
+      "itens": [
+        {
+          "letra": "caput",
+          "texto": "O psicólogo, ao promover publicamente seus serviços, em quaisquer meios de comunicação, fará somente afirmações atestadas pela ciência psicológica e pela legislação profissional vigente."
+        }
+      ]
+    },
+    {
+      "id": "Art. 21",
+      "tipo": "Vedação em atendimento",
+      "itens": [
+        {
+          "letra": "único",
+          "texto": "É vedado ao psicólogo realizar atendimento não eventual de qualquer natureza por meio de recursos tecnológicos de comunicação à distância, sem o devido credenciamento junto ao Conselho Regional de Psicologia."
+        }
+      ]
+    },
+    {
+      "id": "Art. 22",
+      "tipo": "Honorários",
+      "itens": [
+        {
+          "letra": "único",
+          "texto": "O psicólogo baseará as suas relações de honorários em valores definidos contratualmente, considerando as justas condições de prestação dos serviços, a qualificação profissional e o contexto socioeconômico."
+        }
+      ]
+    }
+  ],
+  "principios_fundamentais": [
+    "I. O psicólogo baseará o seu trabalho no respeito e na promoção da liberdade, da dignidade, da igualdade e da integridade do ser humano, apoiado nos valores que embasam a Declaração Universal dos Direitos Humanos.",
+    "II. O psicólogo trabalhará visando promover a saúde e a qualidade de vida das pessoas e das coletividades e contribuirá para a eliminação de quaisquer formas de negligência, discriminação, exploração, violência, crueldade e opressão.",
+    "III. O psicólogo atuará com responsabilidade social, analisando crítica e historicamente a realidade política, econômica, social e cultural.",
+    "IV. O psicólogo atuará com responsabilidade, por meio do contínuo aprimoramento profissional, contribuindo para o desenvolvimento da Psicologia como campo científico de conhecimento e de prática.",
+    "V. O psicólogo contribuirá para promover a universalização do acesso da população às informações, ao conhecimento da ciência psicológica, aos serviços e aos padrões éticos da profissão.",
+    "VI. O psicólogo zelará para que o exercício profissional seja efetuado com dignidade, rejeitando situações em que a Psicologia esteja sendo aviltada.",
+    "VII. O psicólogo considerará as relações de poder nos contextos em que atua e os impactos dessas relações sobre as suas atividades profissionais, posicionando-se de forma crítica e em consonância com os demais princípios deste Código."
+  ]
+}

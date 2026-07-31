@@ -1,0 +1,74 @@
+{
+  "documento": "Resoluções complementares do CFP",
+  "resolucoes": [
+    {
+      "id": "Resolução CFP nº 011/2018",
+      "titulo": "Regulamenta a prestação de serviços psicológicos realizados por meios tecnológicos da informação e da comunicação",
+      "pontos_relevantes": [
+        "Exige cadastro no e-Psi para atendimento online",
+        "Veda a divulgação de resultados de testes psicológicos em redes sociais",
+        "Estabelece que a publicidade em redes sociais deve seguir as mesmas regras do Código de Ética",
+        "Proíbe exposição de pacientes mesmo que com autorização, exceto para fins científicos com anonimato garantido"
+      ]
+    },
+    {
+      "id": "Resolução CFP nº 010/2019",
+      "titulo": "Dispõe sobre a publicidade profissional em Psicologia",
+      "pontos_relevantes": [
+        "Veda a utilização de expressões como 'o melhor', 'o mais eficiente', 'resultado garantido', 'cura' ou 'promessa de resultado'",
+        "Veda a divulgação de valores em publicações de forma a depreciar outros profissionais",
+        "Exige que toda publicidade contenha nome completo, 'Psicólogo(a)' e número do CRP",
+        "Veda o uso de fotos de 'antes e depois' ou depoimentos de pacientes",
+        "Veda autopromoção que favoreça o sensacionalismo ou a exposição de pacientes"
+      ]
+    },
+    {
+      "id": "Resolução CFP nº 001/1999",
+      "titulo": "Estabelece normas de atuação para os psicólogos em relação à questão da Orientação Sexual",
+      "pontos_relevantes": [
+        "Proíbe psicólogos de tratar a homossexualidade como doença, distúrbio ou perversão",
+        "Veda qualquer ação que favoreça a patologização de comportamentos ou práticas homoeróticas",
+        "Proíbe terapias de reversão sexual ou 'cura gay'",
+        "Determina que psicólogos não se pronunciem publicamente de modo a reforçar preconceitos sociais contra orientações sexuais"
+      ]
+    },
+    {
+      "id": "Resolução CFP nº 018/2002",
+      "titulo": "Estabelece normas de atuação para os psicólogos em relação ao preconceito e discriminação racial",
+      "pontos_relevantes": [
+        "Proíbe psicólogos de exercerem ações que favoreçam qualquer tipo de preconceito ou discriminação racial",
+        "Determina que psicólogos contribuam para a eliminação do racismo",
+        "Veda a utilização de instrumentos ou técnicas que reforcem estereótipos raciais"
+      ]
+    },
+    {
+      "id": "Resolução CFP nº 008/2010",
+      "titulo": "Dispõe sobre a atuação do psicólogo como perito e assistente técnico no Poder Judiciário",
+      "pontos_relevantes": [
+        "Estabelece limites éticos para a atuação em processos judiciais",
+        "Veda a emissão de opinião técnica sem a devida fundamentação científica"
+      ]
+    },
+    {
+      "id": "Nota Técnica CFP nº 01/2020",
+      "titulo": "Orientações sobre o uso de redes sociais por psicólogas e psicólogos",
+      "pontos_relevantes": [
+        "As publicações em redes sociais são consideradas atuação profissional e sujeitas ao Código de Ética",
+        "Conteúdos devem ter embasamento científico e evitar sensacionalismo",
+        "É vedado expor pacientes, mesmo que com nomes trocados ou dados alterados, quando houver possibilidade de identificação",
+        "Debates públicos devem manter respeito e urbanidade, evitando ataques pessoais a outros profissionais",
+        "Psicólogos devem evitar a emissão de diagnósticos públicos sobre figuras públicas ou personagens sem avaliação presencial",
+        "É proibido o uso de redes sociais para captação indevida de clientes (merchandising de serviços psicológicos)"
+      ]
+    },
+    {
+      "id": "Resolução CFP nº 006/2019",
+      "titulo": "Institui regras para a elaboração de documentos escritos produzidos pela(o) psicóloga(o) no exercício profissional",
+      "pontos_relevantes": [
+        "Define os tipos de documentos psicológicos válidos",
+        "Estabelece requisitos mínimos de conteúdo para declarações, atestados, relatórios, laudos e pareceres",
+        "Veda emissão de documentos psicológicos sem a devida avaliação presencial"
+      ]
+    }
+  ]
+}
