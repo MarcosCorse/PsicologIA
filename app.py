@@ -1,5 +1,5 @@
 import streamlit as st
-from src.analisador import analisar_publicacao, listar_modelos_disponiveis
+from src.analisador import analisar_publicacao, extrair_texto_imagem, listar_modelos_disponiveis
 from src.crp_manager import (
     buscar_crp_por_estado,
     obter_orientacao_denuncia,
@@ -28,17 +28,56 @@ tab1, tab2 = st.tabs(["Analisar Publicação", "Buscar Conselho Regional"])
 with tab1:
     col1, col2 = st.columns([2, 1])
 
+    # Estado para texto extraído de imagem
+    if "texto_ocr" not in st.session_state:
+        st.session_state.texto_ocr = ""
+
     with col1:
+        texto_padrao = st.session_state.texto_ocr or ""
         texto = st.text_area(
             "Cole aqui a publicação, comentário, legenda ou transcrição:",
-            height=250,
+            value=texto_padrao,
+            height=200,
             placeholder=(
                 "Exemplo:\n"
                 '"Sou psicóloga há 15 anos. Prometo resultado em 3 sessões para '
                 'qualquer tipo de ansiedade. Me chame no direct para agendar!"\n\n'
-                "— Você pode colar textos longos. A IA analisará trecho por trecho."
+                "— Você pode colar textos longos ou enviar um print abaixo."
             ),
         )
+
+        imagem = st.file_uploader(
+            "Ou envie um print de rede social (PNG, JPG):",
+            type=["png", "jpg", "jpeg"],
+            label_visibility="visible",
+        )
+
+        if imagem is not None:
+            col_img, col_btn = st.columns([3, 2])
+            with col_img:
+                st.image(imagem, caption="Prévia", use_container_width=True)
+            with col_btn:
+                if st.button("Extrair texto da imagem", use_container_width=True):
+                    with st.spinner("Lendo texto da imagem..."):
+                        try:
+                            texto_extraido = extrair_texto_imagem(imagem.getvalue())
+                            st.session_state.texto_ocr = texto_extraido
+                            st.rerun()
+                        except Exception as e:
+                            erro = str(e)
+                            if "429" in erro or "rate" in erro.lower():
+                                st.error("Limite de requisições excedido. Aguarde e tente novamente.")
+                            elif "not found" in erro.lower():
+                                st.error("Modelo de OCR indisponível no momento. Tente novamente mais tarde.")
+                            else:
+                                st.error(f"Erro no OCR: {e}")
+
+
+            if st.session_state.texto_ocr:
+                st.caption("✅ Texto extraído. Confira e edite no campo acima antes de analisar.")
+                if st.button("Limpar texto extraído"):
+                    st.session_state.texto_ocr = ""
+                    st.rerun()
 
     with col2:
         st.markdown("### Sobre esta ferramenta")
@@ -54,7 +93,7 @@ with tab1:
         **O que ela NÃO faz:**
         - Não afirma que houve infração (isso cabe ao CRP)
         - Não substitui denúncia formal ao Conselho Regional
-        - Não analisa imagens (apenas texto)
+        - A extração de texto de imagens depende da qualidade do print
 
         **Tecnologia:**
         - IA: Qwen 2.5 7B (open source, Apache 2.0)

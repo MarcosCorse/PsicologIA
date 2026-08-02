@@ -170,5 +170,19 @@ def analisar_publicacao(texto_publicacao, modelo=None):
     return resposta.choices[0].message.content
 
 
+def extrair_texto_imagem(imagem_bytes, modelo_ocr=None):
+    """Extrai texto de uma imagem usando OCR via Hugging Face."""
+    if modelo_ocr is None:
+        modelo_ocr = "microsoft/trocr-base-printed"
+
+    token = _obter_token()
+    if not token:
+        raise RuntimeError("Token do Hugging Face não configurado.")
+
+    client = InferenceClient(token=token, model=modelo_ocr)
+    resultado = client.image_to_text(imagem_bytes)
+    return resultado
+
+
 def listar_modelos_disponiveis():
     return MODELOS_HF
