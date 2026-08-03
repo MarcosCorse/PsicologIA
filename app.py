@@ -102,16 +102,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header customizado
-col_logo, col_titulo = st.columns([3, 5])
-with col_logo:
-    st.image("assets/logo.png", use_container_width=True)
-with col_titulo:
-    st.markdown("""
-    <div style="margin-top: 15px;">
-        <h1 style="color: #1a3a5c; font-size: 2.2rem; margin: 0;">PsicologIA</h1>
-        <p style="color: #4a7a9e; font-size: 1rem; margin: 0.2rem 0 0 0;">Análise Ética de Publicações em Psicologia</p>
-    </div>
-    """, unsafe_allow_html=True)
+st.image("assets/logo.png", use_container_width=True)
 
 st.divider()
 
