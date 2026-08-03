@@ -1,24 +1,27 @@
 import json
 import os
-from huggingface_hub import InferenceClient
+from openai import OpenAI
+from io import BytesIO
+from PIL import Image
+import pytesseract
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
-MODELOS_HF = {
-    "Qwen 2.5 7B (Recomendado)": "Qwen/Qwen2.5-7B-Instruct",
-    "Mistral 7B (França)": "mistralai/Mistral-7B-Instruct-v0.3",
-    "Llama 3.1 8B": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+MODELOS_DEEPSEEK = {
+    "DeepSeek Chat (Recomendado)": "deepseek-chat",
+    "DeepSeek R1 (Raciocínio)": "deepseek-reasoner",
 }
 
-MODELO_PADRAO = "Qwen/Qwen2.5-7B-Instruct"
+MODELO_PADRAO = "deepseek-chat"
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
 
 def _obter_token():
-    token = os.environ.get("HF_TOKEN", "")
+    token = os.environ.get("DEEPSEEK_API_KEY", "")
     if not token:
         try:
             import streamlit as st
-            token = st.secrets.get("HF_TOKEN", "")
+            token = st.secrets.get("DEEPSEEK_API_KEY", "")
         except Exception:
             pass
     return token
@@ -144,14 +147,15 @@ def analisar_publicacao(texto_publicacao, modelo=None):
     token = _obter_token()
     if not token:
         raise RuntimeError(
-            "Token do Hugging Face não encontrado. Configure a variável HF_TOKEN "
-            "ou adicione em .streamlit/secrets.toml: HF_TOKEN = 'hf_...'"
+            "Chave da DeepSeek não encontrada. Configure DEEPSEEK_API_KEY "
+            "nos Secrets do Streamlit Cloud."
         )
 
-    client = InferenceClient(token=token, model=modelo)
+    client = OpenAI(api_key=token, base_url=DEEPSEEK_BASE_URL)
     prompt = _construir_prompt(texto_publicacao)
 
-    resposta = client.chat_completion(
+    resposta = client.chat.completions.create(
+        model=modelo,
         messages=[
             {
                 "role": "system",
@@ -172,14 +176,10 @@ def analisar_publicacao(texto_publicacao, modelo=None):
 
 def extrair_texto_imagem(imagem_bytes):
     """Extrai texto de uma imagem usando pytesseract (OCR offline)."""
-    import pytesseract
-    from PIL import Image
-    from io import BytesIO
-
     imagem = Image.open(BytesIO(imagem_bytes))
     texto = pytesseract.image_to_string(imagem, lang="por")
     return texto.strip()
 
 
 def listar_modelos_disponiveis():
-    return MODELOS_HF
+    return MODELOS_DEEPSEEK

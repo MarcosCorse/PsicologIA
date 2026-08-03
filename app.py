@@ -96,9 +96,10 @@ with tab1:
         - A extração de texto de imagens depende da qualidade do print
 
         **Tecnologia:**
-        - IA: Qwen 2.5 7B (open source, Apache 2.0)
-        - Hospedagem: Hugging Face Spaces
-        - 100% open source, sem big techs
+        - IA: DeepSeek Chat (DeepSeek, China)
+        - OCR: pytesseract (offline, português)
+        - Hospedagem: Streamlit Cloud
+        - Open source, sem big techs americanas
         """
         )
 
@@ -107,7 +108,7 @@ with tab1:
             "Modelo de IA:",
             list(modelos.keys()),
             index=0,
-            help="Qwen 2.5 é o mais equilibrado em qualidade e velocidade para português.",
+            help="DeepSeek Chat é rápido e preciso. DeepSeek R1 pensa mais antes de responder.",
         )
         modelo_id = modelos[nome_modelo]
 
@@ -123,11 +124,11 @@ with tab1:
                     st.markdown(resultado)
                 except Exception as e:
                     erro = str(e)
-                    if "token" in erro.lower() or "HF_TOKEN" in erro:
+                    if "DEEPSEEK" in erro.upper() or "api_key" in erro.lower():
                         st.error(
-                            "❌ Token do Hugging Face não configurado. "
-                            "Configure a variável de ambiente HF_TOKEN ou adicione "
-                            "nos Secrets do Space: `HF_TOKEN = 'hf_...'`"
+                            "❌ Chave da DeepSeek não configurada. "
+                            "Adicione nos Secrets do Streamlit Cloud: "
+                            "`DEEPSEEK_API_KEY = 'sk-...'`"
                         )
                     elif "429" in erro or "rate" in erro.lower():
                         st.error(
@@ -135,7 +136,11 @@ with tab1:
                         )
                     elif "auth" in erro.lower() or "401" in erro:
                         st.error(
-                            "❌ Token inválido. Verifique seu HF_TOKEN."
+                            "❌ Chave da DeepSeek inválida. Verifique seu DEEPSEEK_API_KEY."
+                        )
+                    elif "402" in erro or "saldo" in erro.lower() or "balance" in erro.lower():
+                        st.error(
+                            "❌ Saldo insuficiente na DeepSeek. Recarregue em platform.deepseek.com"
                         )
                     else:
                         st.error(f"❌ Erro durante a análise: {erro}")
