@@ -104,7 +104,7 @@ st.markdown("""
 # Header customizado
 col_logo, col_titulo = st.columns([1, 5])
 with col_logo:
-    st.image("assets/logo.png", width=120)
+    st.image("assets/logo.png", width=480)
 with col_titulo:
     st.markdown("""
     <div style="margin-top: 15px;">
