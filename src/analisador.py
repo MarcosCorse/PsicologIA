@@ -170,18 +170,15 @@ def analisar_publicacao(texto_publicacao, modelo=None):
     return resposta.choices[0].message.content
 
 
-def extrair_texto_imagem(imagem_bytes, modelo_ocr=None):
-    """Extrai texto de uma imagem usando OCR via Hugging Face."""
-    if modelo_ocr is None:
-        modelo_ocr = "microsoft/trocr-base-printed"
+def extrair_texto_imagem(imagem_bytes):
+    """Extrai texto de uma imagem usando pytesseract (OCR offline)."""
+    import pytesseract
+    from PIL import Image
+    from io import BytesIO
 
-    token = _obter_token()
-    if not token:
-        raise RuntimeError("Token do Hugging Face não configurado.")
-
-    client = InferenceClient(token=token, model=modelo_ocr)
-    resultado = client.image_to_text(imagem_bytes)
-    return resultado
+    imagem = Image.open(BytesIO(imagem_bytes))
+    texto = pytesseract.image_to_string(imagem, lang="por")
+    return texto.strip()
 
 
 def listar_modelos_disponiveis():
