@@ -13,8 +13,121 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("PsicologIA")
-st.subheader("Análise Ética de Publicações em Psicologia")
+st.markdown("""
+<style>
+    /* Fundo geral */
+    .stApp {
+        background-color: #f8faff;
+    }
+
+    /* Header principal */
+    .main-header {
+        background: linear-gradient(135deg, #1a3a5c 0%, #2d6da8 100%);
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+    .main-header h1 {
+        color: white;
+        font-size: 2.2rem;
+        margin: 0;
+    }
+    .main-header p {
+        color: #c8ddf0;
+        font-size: 1rem;
+        margin: 0.3rem 0 0 0;
+    }
+
+    /* Botão primário */
+    .stButton > button {
+        background: linear-gradient(135deg, #1e6fbf 0%, #2d8ad4 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #1a5a9e 0%, #2578b8 100%);
+        box-shadow: 0 2px 8px rgba(30, 111, 191, 0.3);
+    }
+
+    /* Botão secundário */
+    .stButton > button[kind="secondary"] {
+        background: white;
+        color: #1e6fbf;
+        border: 1.5px solid #1e6fbf;
+    }
+    .stButton > button[kind="secondary"]:hover {
+        background: #e8f0fa;
+    }
+
+    /* Cards e containers */
+    .stExpander {
+        background: white;
+        border: 1px solid #d8e4f0;
+        border-radius: 10px;
+    }
+    .stTabs [data-baseweb="tab"] {
+        color: #4a6a8a;
+        font-weight: 500;
+    }
+    .stTabs [aria-selected="true"] {
+        color: #1e6fbf;
+        font-weight: 600;
+        border-bottom: 2px solid #1e6fbf;
+    }
+
+    /* Área de texto */
+    .stTextArea textarea {
+        border: 1.5px solid #c8d8e8;
+        border-radius: 8px;
+        background: white;
+    }
+    .stTextArea textarea:focus {
+        border-color: #1e6fbf;
+        box-shadow: 0 0 0 2px rgba(30, 111, 191, 0.1);
+    }
+
+    /* Select e file uploader */
+    .stSelectbox > div > div {
+        border-radius: 8px;
+    }
+    .stFileUploader {
+        background: #f0f5fb;
+        border: 1.5px dashed #a8c4e0;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    /* Alertas coloridos */
+    .stSuccess { background-color: #e8f5e9; border-left: 4px solid #2e7d32; }
+    .stWarning { background-color: #fff8e1; border-left: 4px solid #f9a825; }
+    .stError   { background-color: #ffebee; border-left: 4px solid #c62828; }
+    .stInfo    { background-color: #e3f2fd; border-left: 4px solid #1e6fbf; }
+
+    /* Rodapé */
+    .footer {
+        text-align: center;
+        color: #7a8ea0;
+        font-size: 0.8rem;
+        padding: 1.5rem 0 0.5rem 0;
+        border-top: 1px solid #d8e4f0;
+        margin-top: 2rem;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Header customizado
+st.markdown("""
+<div class="main-header">
+    <h1>🧠 PsicologIA</h1>
+    <p>Análise Ética de Publicações em Psicologia</p>
+</div>
+""", unsafe_allow_html=True)
+
 st.caption(
     "Ferramenta gratuita e open source para orientação da sociedade. "
     "Identifica possíveis incompatibilidades com as normas do CFP. "
@@ -199,3 +312,12 @@ with tab2:
         **Sobre denúncias ao CFP:** {cfp['canais_denuncia']}
         """
         )
+
+# Rodapé
+st.markdown("""
+<div class="footer">
+    PsicologIA · v1.0 · Tecnologia DeepSeek (China) · Open source · 
+    <a href="https://github.com/MarcosCorse/PsicologIA" style="color: #1e6fbf;">GitHub</a>
+    <br>Esta ferramenta não substitui denúncia formal ao Conselho Regional de Psicologia.
+</div>
+""", unsafe_allow_html=True)
