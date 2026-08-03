@@ -20,25 +20,6 @@ st.markdown("""
         background-color: #f8faff;
     }
 
-    /* Header principal */
-    .main-header {
-        background: linear-gradient(135deg, #1a3a5c 0%, #2d6da8 100%);
-        padding: 2rem 2.5rem;
-        border-radius: 12px;
-        margin-bottom: 1.5rem;
-        color: white;
-    }
-    .main-header h1 {
-        color: white;
-        font-size: 2.2rem;
-        margin: 0;
-    }
-    .main-header p {
-        color: #c8ddf0;
-        font-size: 1rem;
-        margin: 0.3rem 0 0 0;
-    }
-
     /* Botão primário */
     .stButton > button {
         background: linear-gradient(135deg, #1e6fbf 0%, #2d8ad4 100%);
@@ -121,12 +102,18 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header customizado
-st.markdown("""
-<div class="main-header">
-    <h1>🧠 PsicologIA</h1>
-    <p>Análise Ética de Publicações em Psicologia</p>
-</div>
-""", unsafe_allow_html=True)
+col_logo, col_titulo = st.columns([1, 5])
+with col_logo:
+    st.image("assets/logo.png", width=120)
+with col_titulo:
+    st.markdown("""
+    <div style="margin-top: 15px;">
+        <h1 style="color: #1a3a5c; font-size: 2.2rem; margin: 0;">PsicologIA</h1>
+        <p style="color: #4a7a9e; font-size: 1rem; margin: 0.2rem 0 0 0;">Análise Ética de Publicações em Psicologia</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.divider()
 
 st.caption(
     "Ferramenta gratuita e open source para orientação da sociedade. "
