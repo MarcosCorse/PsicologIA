@@ -28,16 +28,15 @@ st.markdown("""
 
     /* Cartão principal flutuante */
     .main .block-container {
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.75);
         border-radius: 20px;
         padding: 2rem 2.5rem;
         margin: 1.2rem 1rem;
-        box-shadow: 0 8px 32px rgba(0, 40, 60, 0.12), 0 2px 8px rgba(0, 40, 60, 0.06);
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #fafcfe 0%, #ffffff 100%);
+        background: #d8ecf6;
     }
     [data-testid="stSidebar"] .block-container {
         padding: 1.5rem 1rem;
@@ -74,8 +73,9 @@ st.markdown("""
 
     /* Textarea */
     .stTextArea textarea {
-        border: 1.5px solid #dfe7ef;
+        border: 1.5px solid #c5dded;
         border-radius: 14px;
+        background: #f6fafd;
         font-size: 15px;
         padding: 14px 18px;
         color: #1a202c;
@@ -127,6 +127,127 @@ st.markdown("""
     .stSelectbox > div > div {
         border-radius: 10px;
     }
+
+    /* ── Cards ── */
+    .card {
+        background: #e8f4fa;
+        border-radius: 16px;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.2rem;
+        border: 1px solid #c5e0f0;
+        box-shadow: 0 2px 8px rgba(0, 60, 100, 0.06);
+    }
+    .card-header {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #0d3b5c;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .card-icon {
+        font-size: 1.3rem;
+    }
+
+    /* ── Barra de passos ── */
+    .steps {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.5rem 0 2rem 0;
+        text-align: center;
+    }
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        opacity: 0.5;
+    }
+    .step.active { opacity: 1; }
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #c5e0f0;
+        color: #0d3b5c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    .step.active .step-circle {
+        background: #007aad;
+        color: white;
+    }
+    .step-label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: #4a7a9a;
+    }
+    .step.active .step-label {
+        color: #0d3b5c;
+        font-weight: 600;
+    }
+    .step-line {
+        width: 60px;
+        height: 2px;
+        background: #c5e0f0;
+        margin-top: 17px;
+    }
+
+    /* ── Badges ── */
+    .badge {
+        display: inline-block;
+        padding: 0.25rem 0.7rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+    .badge-blue   { background: #e0f0f8; color: #007aad; }
+    .badge-green  { background: #e6f4ea; color: #1e7e34; }
+    .badge-amber  { background: #fef3e0; color: #b45309; }
+
+    /* ── Banner decorativo ── */
+    .banner {
+        background: linear-gradient(135deg, #007aad 0%, #009DCF 40%, #4db8e0 100%);
+        border-radius: 20px;
+        padding: 2rem 2.5rem;
+        margin-bottom: 1.5rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -40px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 50%;
+    }
+    .banner::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: 20%;
+        width: 250px;
+        height: 250px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 50%;
+    }
+    .banner-text {
+        position: relative;
+        z-index: 1;
+        font-size: 1rem;
+        line-height: 1.7;
+        font-weight: 400;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -137,18 +258,44 @@ with col_logo:
 
 st.divider()
 
-st.markdown(
-    '<p style="font-size: 18px; color: #0a1f3a; font-weight: 700; line-height: 1.6; text-align: justify; text-shadow: 1px 1px 0px rgba(180, 215, 240, 0.8);">'
-    "Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor "
-    "as informações apresentadas no perfil profissional? O PsicologIA ajuda você "
-    "a analisar dados como identificação, registro profissional, formação, títulos, "
-    "serviços oferecidos e formas de divulgação, sinalizando pontos que podem estar "
-    "em desacordo com as normas da Psicologia. A ferramenta é gratuita, de código "
-    "aberto e foi criada para tornar essa consulta mais simples e acessível, mesmo "
-    "para quem não conhece as regras da profissão."
-    '</p>',
-    unsafe_allow_html=True,
-)
+# ── Banner decorativo ─────────────────────────────────────────
+
+st.markdown("""
+<div class="banner">
+    <p class="banner-text">
+        Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor
+        as informações apresentadas no perfil profissional? O <strong>PsicologIA</strong>
+        ajuda você a analisar dados como identificação, registro profissional, formação,
+        títulos, serviços oferecidos e formas de divulgação, sinalizando pontos que podem
+        estar em desacordo com as normas da Psicologia.
+        <br><br>
+        <span class="badge badge-blue">Gratuito</span>
+        <span class="badge badge-green">Open Source</span>
+        <span class="badge badge-amber">IA · DeepSeek</span>
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# ── Barra de passos ───────────────────────────────────────────
+
+st.markdown("""
+<div class="steps">
+    <div class="step active">
+        <div class="step-circle">1</div>
+        <div class="step-label">Cole o texto</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-label">Confirme</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-label">Resultado</div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # ── Sidebar ──────────────────────────────────────────────────
 
@@ -203,6 +350,10 @@ with st.sidebar:
 
 # ── Área principal ───────────────────────────────────────────
 
+# Card 1: Entrada
+st.markdown('<div class="card">', unsafe_allow_html=True)
+st.markdown('<div class="card-header"><span class="card-icon">📝</span> Envie a publicação para análise</div>', unsafe_allow_html=True)
+
 # Estado para texto extraído de imagem
 if "texto_ocr" not in st.session_state:
     st.session_state.texto_ocr = ""
@@ -211,19 +362,17 @@ texto_padrao = st.session_state.texto_ocr or ""
 texto = st.text_area(
     "Cole aqui a publicação, comentário, legenda ou transcrição:",
     value=texto_padrao,
-    height=200,
+    height=180,
     placeholder=(
         "Exemplo:\n"
         '"Sou psicóloga há 15 anos. Prometo resultado em 3 sessões para '
-        'qualquer tipo de ansiedade. Me chame no direct para agendar!"\n\n'
-        "— Você pode colar textos longos ou enviar um print abaixo."
+        'qualquer tipo de ansiedade. Me chame no direct para agendar!"'
     ),
 )
 
 imagem = st.file_uploader(
     "Ou envie um print de rede social (PNG, JPG):",
     type=["png", "jpg", "jpeg"],
-    label_visibility="visible",
 )
 
 if imagem is not None:
@@ -231,7 +380,7 @@ if imagem is not None:
     with col_img:
         st.image(imagem, caption="Prévia", use_container_width=True)
     with col_btn:
-        if st.button("Extrair texto da imagem", use_container_width=True):
+        if st.button("📷 Extrair texto da imagem", use_container_width=True):
             with st.spinner("Lendo texto da imagem..."):
                 try:
                     texto_extraido = extrair_texto_imagem(imagem.getvalue())
@@ -242,9 +391,15 @@ if imagem is not None:
 
     if st.session_state.texto_ocr:
         st.caption("✅ Texto extraído. Confira e edite no campo acima antes de analisar.")
-        if st.button("Limpar texto extraído"):
+        if st.button("🗑️ Limpar texto extraído"):
             st.session_state.texto_ocr = ""
             st.rerun()
+
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Card 2: Confirmação e análise
+st.markdown('<div class="card">', unsafe_allow_html=True)
+st.markdown('<div class="card-header"><span class="card-icon">⚖️</span> Confirme e analise</div>', unsafe_allow_html=True)
 
 st.warning(
     "⚠️ A ferramenta sinaliza possíveis incompatibilidades com as normas "
@@ -270,33 +425,36 @@ if st.button(
         with st.spinner("Analisando com IA... Isso pode levar alguns segundos."):
             try:
                 resultado = analisar_publicacao(texto, modelo_id)
-                st.success("Análise concluída!")
+                st.success("✅ Análise concluída!")
                 st.markdown("---")
                 st.markdown(resultado)
             except Exception as e:
                 erro = str(e)
                 if "DEEPSEEK" in erro.upper() or "api_key" in erro.lower():
-                    st.error(
-                        "❌ Chave da DeepSeek não configurada. "
-                        "Adicione nos Secrets do Streamlit Cloud: "
-                        "`DEEPSEEK_API_KEY = 'sk-...'`"
-                    )
+                    st.error("❌ Chave da DeepSeek não configurada. Adicione nos Secrets do Streamlit Cloud.")
                 elif "429" in erro or "rate" in erro.lower():
                     st.error("❌ Limite de requisições excedido. Aguarde e tente novamente.")
                 elif "auth" in erro.lower() or "401" in erro:
-                    st.error("❌ Chave da DeepSeek inválida. Verifique seu DEEPSEEK_API_KEY.")
+                    st.error("❌ Chave da DeepSeek inválida.")
                 elif "402" in erro or "saldo" in erro.lower() or "balance" in erro.lower():
-                    st.error("❌ Saldo insuficiente na DeepSeek. Recarregue em platform.deepseek.com")
+                    st.error("❌ Saldo insuficiente na DeepSeek.")
                 else:
                     st.error(f"❌ Erro durante a análise: {erro}")
 
-st.markdown("---")
-with st.expander("📋 Como preservar evidências e denunciar"):
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Card 3: Orientações
+st.markdown('<div class="card">', unsafe_allow_html=True)
+st.markdown('<div class="card-header"><span class="card-icon">📋</span> Como preservar evidências e denunciar</div>', unsafe_allow_html=True)
+
+with st.expander("Clique para ver o passo a passo"):
     orientacao = obter_orientacao_denuncia()
     st.info(orientacao["introducao"])
     for passo in orientacao["passos"]:
         st.markdown(f"**{passo['passo']}. {passo['titulo']}**  \n{passo['descricao']}")
     st.warning(orientacao["ressalva_final"])
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Rodapé
 st.markdown("""
