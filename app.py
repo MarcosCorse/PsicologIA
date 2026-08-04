@@ -17,8 +17,8 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-    html, body, [class*="st-"] {
-        font-family: 'Inter', sans-serif;
+    html, body, .stMarkdown, .stText, p, label, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     /* Fundo com formas orgânicas suaves */
