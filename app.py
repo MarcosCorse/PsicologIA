@@ -247,6 +247,7 @@ st.markdown("""
         font-size: 1rem;
         line-height: 1.7;
         font-weight: 400;
+        text-align: justify;
     }
 </style>
 """, unsafe_allow_html=True)
