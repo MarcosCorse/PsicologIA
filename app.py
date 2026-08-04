@@ -164,7 +164,7 @@ with col_logo:
 st.divider()
 
 st.markdown(
-    '<p style="font-size: 16px; color: #3a4a5a; line-height: 1.6; text-align: justify;">'
+    '<p style="font-size: 18px; color: #0a1f3a; font-weight: 700; line-height: 1.6; text-align: justify; text-shadow: 1px 1px 0px rgba(255,255,255,0.8);">'
     "Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor "
     "as informações apresentadas no perfil profissional? O PsicologIA ajuda você "
     "a analisar dados como identificação, registro profissional, formação, títulos, "
