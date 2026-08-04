@@ -28,7 +28,7 @@ st.markdown("""
 
     /* Cartão principal flutuante */
     .main .block-container {
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.65);
         border-radius: 20px;
         padding: 2rem 2.5rem;
         margin: 1.2rem 1rem;
@@ -36,7 +36,7 @@ st.markdown("""
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: #c0dff2;
+        background: #a8d4ea;
     }
     [data-testid="stSidebar"] .block-container {
         padding: 1.5rem 1rem;
@@ -130,17 +130,17 @@ st.markdown("""
 
     /* ── Cards ── */
     .card {
-        background: #d0e8f5;
+        background: #a8d4ea;
         border-radius: 16px;
         padding: 1.5rem 2rem;
         margin-bottom: 1.2rem;
-        border: 2px solid #009DCF;
+        border: 2px solid #007aad;
         box-shadow: 0 4px 16px rgba(0, 60, 100, 0.1);
     }
     .card-header {
         font-size: 1.1rem;
         font-weight: 700;
-        color: #004466;
+        color: #003450;
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -256,7 +256,7 @@ col_logo, _ = st.columns([1, 1])
 with col_logo:
     st.image("assets/logo.png", use_container_width=True)
 
-st.caption("v2.0 — Cards · Banner · Passos · Badges")
+st.caption("v2.1 — Cards azuis intensos")
 
 st.divider()
 
