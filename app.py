@@ -207,7 +207,24 @@ if imagem is not None:
             st.session_state.texto_ocr = ""
             st.rerun()
 
-if st.button("🔍 Analisar Publicação", type="primary", use_container_width=True):
+st.warning(
+    "⚠️ A ferramenta sinaliza possíveis incompatibilidades com as normas "
+    "do Conselho Federal de Psicologia (CFP), mas **não determina se houve "
+    "infração ética**. Essa avaliação e a decisão final cabem exclusivamente "
+    "aos Conselhos Regionais de Psicologia."
+)
+
+confirmou = st.checkbox(
+    "Declaro que entendi: esta ferramenta não determina infração ética.",
+    value=False,
+)
+
+if st.button(
+    "🔍 Analisar Publicação",
+    type="primary",
+    use_container_width=True,
+    disabled=not confirmou,
+):
     if not texto.strip():
         st.warning("Por favor, cole o texto da publicação antes de analisar.")
     else:
