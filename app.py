@@ -21,158 +21,111 @@ st.markdown("""
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    /* Fundo com formas orgânicas suaves */
+    /* Fundo azul */
     .stApp {
-        background:
-            radial-gradient(ellipse 80% 60% at 20% 15%, rgba(0, 157, 207, 0.12) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 50% at 80% 70%, rgba(100, 180, 220, 0.10) 0%, transparent 55%),
-            radial-gradient(circle 40% at 50% 50%, rgba(0, 157, 207, 0.05) 0%, transparent 50%),
-            #f8fafc;
-        background-attachment: fixed;
+        background: #009DCF;
     }
 
-    /* Conteúdo principal - card flutuante */
+    /* Cartão principal flutuante */
     .main .block-container {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-radius: 24px;
+        background: #ffffff;
+        border-radius: 20px;
         padding: 2rem 2.5rem;
-        margin-top: 1rem;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03);
-        border: 1px solid rgba(0, 0, 0, 0.04);
+        margin: 1.2rem 1rem;
+        box-shadow: 0 8px 32px rgba(0, 40, 60, 0.12), 0 2px 8px rgba(0, 40, 60, 0.06);
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #ffffff 0%, #fafcfe 100%);
-        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        background: linear-gradient(180deg, #fafcfe 0%, #ffffff 100%);
+    }
+    [data-testid="stSidebar"] .block-container {
+        padding: 1.5rem 1rem;
     }
 
     /* Botão primário */
     .stButton > button {
-        background: linear-gradient(135deg, #007aad 0%, #009DCF 100%);
+        background: #007aad;
         color: white;
         border: none;
-        border-radius: 14px;
-        padding: 0.7rem 2rem;
+        border-radius: 12px;
+        padding: 0.65rem 1.8rem;
         font-weight: 600;
-        font-size: 1rem;
-        letter-spacing: 0.01em;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 12px rgba(0, 157, 207, 0.25);
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 90, 130, 0.2);
     }
     .stButton > button:hover {
-        background: linear-gradient(135deg, #006994 0%, #008bb8 100%);
-        box-shadow: 0 6px 20px rgba(0, 157, 207, 0.35);
-        transform: translateY(-2px);
+        background: #006a98;
+        box-shadow: 0 4px 16px rgba(0, 90, 130, 0.3);
+        transform: translateY(-1px);
     }
 
-    /* Botão secundário */
     .stButton > button[kind="secondary"] {
         background: white;
         color: #007aad;
-        border: 2px solid #cde4f0;
+        border: 1.5px solid #b8d8e8;
         box-shadow: none;
     }
     .stButton > button[kind="secondary"]:hover {
-        background: #f0f8fc;
+        background: #eef6fa;
         border-color: #007aad;
     }
 
-    /* Área de texto */
+    /* Textarea */
     .stTextArea textarea {
-        border: 2px solid #e2e8f0;
-        border-radius: 16px;
-        background: #fafcfd;
+        border: 1.5px solid #dfe7ef;
+        border-radius: 14px;
         font-size: 15px;
-        padding: 16px 20px;
-        transition: all 0.25s;
+        padding: 14px 18px;
         color: #1a202c;
     }
     .stTextArea textarea:focus {
         border-color: #009DCF;
-        background: white;
-        box-shadow: 0 0 0 4px rgba(0, 157, 207, 0.08);
-    }
-
-    /* Labels */
-    .stTextArea label, .stFileUploader label {
-        font-size: 15px;
-        font-weight: 600;
-        color: #2d3748;
-        margin-bottom: 0.5rem;
+        box-shadow: 0 0 0 3px rgba(0, 157, 207, 0.1);
     }
 
     /* Upload */
     .stFileUploader {
-        background: #f8fafc;
-        border: 2px dashed #d5e4f0;
-        border-radius: 16px;
-        padding: 1.5rem;
-        transition: all 0.25s;
+        border: 2px dashed #c0d6e4;
+        border-radius: 14px;
+        padding: 1rem;
     }
     .stFileUploader:hover {
         border-color: #009DCF;
-        background: #f0f7fb;
-        border-style: solid;
+        background: #f4f9fc;
     }
 
     /* Expanders */
     .stExpander {
-        background: white;
         border: 1px solid #edf2f7;
-        border-radius: 16px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    }
-    .stExpander > div:first-child {
-        font-weight: 600;
-        color: #2d3748;
-    }
-
-    /* Checkbox */
-    .stCheckbox label {
-        font-size: 14px;
-        color: #4a5568;
-        font-weight: 500;
+        border-radius: 14px;
+        background: white;
     }
 
     /* Alertas */
-    .stSuccess, .stWarning, .stError, .stInfo {
-        border-radius: 14px;
-        padding: 1rem 1.3rem;
-    }
     .stWarning {
-        background-color: #fef7ed;
-        border-left: 4px solid #f59e0b;
-        border-radius: 14px;
+        background: #fef9f0;
+        border-left: 4px solid #e8a030;
+        border-radius: 12px;
     }
 
     /* Rodapé */
     .footer {
         text-align: center;
-        color: #94a3b8;
+        color: #7a8fa0;
         font-size: 0.85rem;
-        padding: 2.5rem 0 1rem 0;
-        border-top: 1px solid #edf2f7;
-        margin-top: 3rem;
+        padding: 2rem 0 0.8rem 0;
+        border-top: 1px solid #e8eef4;
+        margin-top: 2.5rem;
     }
     .footer a {
-        color: #009DCF;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    .footer a:hover {
         color: #007aad;
     }
 
     /* Select */
     .stSelectbox > div > div {
-        border-radius: 12px;
-    }
-
-    h1, h2, h3, h4 {
-        color: #1a202c;
+        border-radius: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
