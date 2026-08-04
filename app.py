@@ -15,143 +15,164 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    /* Fundo geral */
-    .stApp {
-        background-color: #009DCF;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    html, body, [class*="st-"] {
+        font-family: 'Inter', sans-serif;
     }
 
-    /* Permite ver o fundo através do conteúdo principal */
-    .main .block-container {
-        background: rgba(255, 255, 255, 0.92);
-        border-radius: 14px;
-        padding: 1rem 2rem;
-        margin-top: 0.5rem;
+    /* Fundo com formas orgânicas suaves */
+    .stApp {
+        background:
+            radial-gradient(ellipse 80% 60% at 20% 15%, rgba(0, 157, 207, 0.12) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 50% at 80% 70%, rgba(100, 180, 220, 0.10) 0%, transparent 55%),
+            radial-gradient(circle 40% at 50% 50%, rgba(0, 157, 207, 0.05) 0%, transparent 50%),
+            #f8fafc;
+        background-attachment: fixed;
     }
-    .main {
-        padding: 1rem 2rem;
+
+    /* Conteúdo principal - card flutuante */
+    .main .block-container {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 2rem 2.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.04);
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background-color: #ffffff;
-        border-right: 1px solid #e8ecf2;
-    }
-    [data-testid="stSidebar"] h3 {
-        font-weight: 700;
-    }
-
-    /* Divisores */
-    hr {
-        border-color: #e8ecf2;
+        background: linear-gradient(180deg, #ffffff 0%, #fafcfe 100%);
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     /* Botão primário */
     .stButton > button {
-        background: linear-gradient(135deg, #4a90d9 0%, #6ba3e0 100%);
+        background: linear-gradient(135deg, #007aad 0%, #009DCF 100%);
         color: white;
         border: none;
-        border-radius: 12px;
-        padding: 0.6rem 2rem;
+        border-radius: 14px;
+        padding: 0.7rem 2rem;
         font-weight: 600;
         font-size: 1rem;
-        transition: all 0.25s ease;
-        box-shadow: 0 2px 6px rgba(74, 144, 217, 0.2);
+        letter-spacing: 0.01em;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 157, 207, 0.25);
     }
     .stButton > button:hover {
-        background: linear-gradient(135deg, #3a7bc8 0%, #5a94d4 100%);
-        box-shadow: 0 4px 14px rgba(74, 144, 217, 0.35);
-        transform: translateY(-1px);
+        background: linear-gradient(135deg, #006994 0%, #008bb8 100%);
+        box-shadow: 0 6px 20px rgba(0, 157, 207, 0.35);
+        transform: translateY(-2px);
     }
 
     /* Botão secundário */
     .stButton > button[kind="secondary"] {
         background: white;
-        color: #4a90d9;
-        border: 2px solid #4a90d9;
+        color: #007aad;
+        border: 2px solid #cde4f0;
         box-shadow: none;
     }
     .stButton > button[kind="secondary"]:hover {
-        background: #f0f5fb;
+        background: #f0f8fc;
+        border-color: #007aad;
     }
 
     /* Área de texto */
     .stTextArea textarea {
-        border: 2px solid #dde3ed;
-        border-radius: 14px;
-        background: white;
+        border: 2px solid #e2e8f0;
+        border-radius: 16px;
+        background: #fafcfd;
         font-size: 15px;
-        padding: 14px 18px;
-        transition: border-color 0.2s;
+        padding: 16px 20px;
+        transition: all 0.25s;
+        color: #1a202c;
     }
     .stTextArea textarea:focus {
-        border-color: #4a90d9;
-        box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.12);
+        border-color: #009DCF;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(0, 157, 207, 0.08);
     }
 
-    /* File uploader */
+    /* Labels */
+    .stTextArea label, .stFileUploader label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Upload */
     .stFileUploader {
-        background: #fafbfd;
-        border: 2px dashed #c8d6e5;
-        border-radius: 14px;
-        padding: 1.2rem;
-        transition: all 0.2s;
+        background: #f8fafc;
+        border: 2px dashed #d5e4f0;
+        border-radius: 16px;
+        padding: 1.5rem;
+        transition: all 0.25s;
     }
     .stFileUploader:hover {
-        border-color: #4a90d9;
-        background: #f5f8fc;
+        border-color: #009DCF;
+        background: #f0f7fb;
+        border-style: solid;
     }
 
     /* Expanders */
     .stExpander {
         background: white;
-        border: 1px solid #e8ecf2;
-        border-radius: 14px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        border: 1px solid #edf2f7;
+        border-radius: 16px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .stExpander > div:first-child {
+        font-weight: 600;
+        color: #2d3748;
     }
 
     /* Checkbox */
     .stCheckbox label {
-        font-size: 15px;
+        font-size: 14px;
         color: #4a5568;
+        font-weight: 500;
     }
 
     /* Alertas */
     .stSuccess, .stWarning, .stError, .stInfo {
-        border-radius: 12px;
-        padding: 1rem 1.2rem;
+        border-radius: 14px;
+        padding: 1rem 1.3rem;
     }
     .stWarning {
-        background-color: #fff8f0;
-        border-left: 5px solid #f0a040;
+        background-color: #fef7ed;
+        border-left: 4px solid #f59e0b;
         border-radius: 14px;
     }
 
     /* Rodapé */
     .footer {
         text-align: center;
-        color: #8a97a8;
+        color: #94a3b8;
         font-size: 0.85rem;
-        padding: 2rem 0 0.8rem 0;
-        border-top: 1px solid #e8ecf2;
-        margin-top: 2.5rem;
+        padding: 2.5rem 0 1rem 0;
+        border-top: 1px solid #edf2f7;
+        margin-top: 3rem;
     }
     .footer a {
-        color: #4a90d9;
+        color: #009DCF;
         text-decoration: none;
         font-weight: 500;
     }
     .footer a:hover {
-        text-decoration: underline;
+        color: #007aad;
     }
 
-    /* Spinner */
-    .stSpinner {
-        color: #4a90d9;
-    }
-
-    /* Selectbox */
+    /* Select */
     .stSelectbox > div > div {
-        border-radius: 10px;
+        border-radius: 12px;
+    }
+
+    h1, h2, h3, h4 {
+        color: #1a202c;
     }
 </style>
 """, unsafe_allow_html=True)
