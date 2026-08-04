@@ -17,14 +17,14 @@ st.markdown("""
 <style>
     /* Fundo geral com manchas de aquarela */
     .stApp {
-        background-color: #f0f6ff;
+        background-color: #0009DC;
         background-image:
-            radial-gradient(ellipse at 15% 10%, rgba(160, 200, 240, 0.65) 0%, transparent 55%),
-            radial-gradient(ellipse at 85% 25%, rgba(120, 180, 235, 0.5) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 70%, rgba(150, 195, 238, 0.55) 0%, transparent 60%),
-            radial-gradient(ellipse at 20% 85%, rgba(140, 190, 240, 0.45) 0%, transparent 45%),
-            radial-gradient(ellipse at 75% 80%, rgba(130, 185, 238, 0.4) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(175, 210, 245, 0.5) 0%, transparent 40%);
+            radial-gradient(ellipse at 15% 10%, rgba(40, 50, 235, 0.65) 0%, transparent 55%),
+            radial-gradient(ellipse at 85% 25%, rgba(20, 35, 225, 0.5) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 70%, rgba(30, 45, 230, 0.55) 0%, transparent 60%),
+            radial-gradient(ellipse at 20% 85%, rgba(25, 40, 228, 0.45) 0%, transparent 45%),
+            radial-gradient(ellipse at 75% 80%, rgba(20, 38, 222, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(45, 55, 240, 0.5) 0%, transparent 40%);
         background-attachment: fixed;
     }
     .main {
