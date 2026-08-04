@@ -130,11 +130,11 @@ st.markdown("""
 
     /* ── Cards ── */
     .card {
-        background: #e8f4fa;
+        background: linear-gradient(180deg, #e0f0f8 0%, #c5e2f2 100%);
         border-radius: 16px;
         padding: 1.5rem 2rem;
         margin-bottom: 1.2rem;
-        border: 1px solid #c5e0f0;
+        border: 1px solid #b0d4e8;
         box-shadow: 0 2px 8px rgba(0, 60, 100, 0.06);
     }
     .card-header {
