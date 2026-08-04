@@ -102,7 +102,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header customizado
-col_logo, _ = st.columns([1, 1])
+col_logo, _ = st.columns([1, 3])
 with col_logo:
     st.image("assets/logo.png", use_container_width=True)
 
