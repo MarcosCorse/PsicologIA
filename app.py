@@ -15,10 +15,10 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
     html, body, .stMarkdown, .stText, p, label, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     /* Fundo azul */
