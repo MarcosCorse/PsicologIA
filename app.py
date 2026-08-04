@@ -157,7 +157,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header customizado
-st.image("assets/logo.png", use_container_width=True)
+col_logo, _ = st.columns([1, 1])
+with col_logo:
+    st.image("assets/logo.png", use_container_width=True)
 
 st.divider()
 
