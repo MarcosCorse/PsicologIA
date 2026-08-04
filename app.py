@@ -117,22 +117,11 @@ st.caption(
 # ── Sidebar ──────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("### ⚙️ Configuração")
-    modelos = listar_modelos_disponiveis()
-    nome_modelo = st.selectbox(
-        "Modelo de IA:",
-        list(modelos.keys()),
-        index=0,
-        help="DeepSeek Chat é rápido e preciso. DeepSeek R1 pensa mais antes de responder.",
-    )
-    modelo_id = modelos[nome_modelo]
-
-    st.markdown("---")
-    st.markdown("### 📍 Buscar Conselho Regional")
+    st.markdown("### 📍 Encontre o Conselho Regional")
 
     ufs = [""] + sorted(MAPA_ESTADOS.keys())
     uf_selecionada = st.selectbox(
-        "Estado do profissional:",
+        "Estado onde o profissional atua:",
         ufs,
         format_func=lambda u: f"{u} — {MAPA_ESTADOS[u]}" if u else "Selecione...",
     )
@@ -140,8 +129,7 @@ with st.sidebar:
     if uf_selecionada:
         crp = buscar_crp_por_estado(uf_selecionada)
         if crp:
-            st.success(f"**{crp['sigla']}**")
-            st.caption(f"{crp['nome']}")
+            st.success(f"**{crp['sigla']}** — {crp['nome']}")
             st.markdown(f"📧 {crp['email']}")
             st.markdown(f"📞 {crp['telefone']}")
             st.markdown(f"🌐 [{crp['site']}]({crp['site']})")
@@ -151,16 +139,28 @@ with st.sidebar:
             st.warning("Estado não encontrado.")
 
     cfp = obter_info_cfp()
-    with st.expander(f"{cfp['sigla']} (Federal)"):
+    with st.expander(f"📋 {cfp['sigla']} — Conselho Federal"):
         st.caption(f"📧 {cfp['email']}")
         st.caption(f"📞 {cfp['telefone']}")
         st.caption(f"🌐 [{cfp['site']}]({cfp['site']})")
 
     st.markdown("---")
+
     st.caption(
-        "Esta ferramenta NÃO determina infração ética. "
+        "⚠️ Esta ferramenta NÃO determina infração ética. "
         "Apenas o CRP pode decidir após processo formal."
     )
+
+    st.markdown("---")
+
+    with st.expander("⚙️ Configuração"):
+        modelos = listar_modelos_disponiveis()
+        nome_modelo = st.selectbox(
+            "Modelo de IA:",
+            list(modelos.keys()),
+            index=0,
+        )
+        modelo_id = modelos[nome_modelo]
 
 # ── Área principal ───────────────────────────────────────────
 
