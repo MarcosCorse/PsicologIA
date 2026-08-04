@@ -17,86 +17,133 @@ st.markdown("""
 <style>
     /* Fundo geral */
     .stApp {
-        background-color: #f8faff;
+        background-color: #f5f7fb;
+    }
+    .main {
+        padding: 1rem 2rem;
+    }
+
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #ffffff;
+        border-right: 1px solid #e8ecf2;
+    }
+    [data-testid="stSidebar"] h3 {
+        font-weight: 700;
+    }
+
+    /* Divisores */
+    hr {
+        border-color: #e8ecf2;
     }
 
     /* Botão primário */
     .stButton > button {
-        background: linear-gradient(135deg, #1e6fbf 0%, #2d8ad4 100%);
+        background: linear-gradient(135deg, #4a90d9 0%, #6ba3e0 100%);
         color: white;
         border: none;
-        border-radius: 8px;
-        padding: 0.5rem 1.5rem;
+        border-radius: 12px;
+        padding: 0.6rem 2rem;
         font-weight: 600;
-        transition: all 0.2s;
+        font-size: 1rem;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 6px rgba(74, 144, 217, 0.2);
     }
     .stButton > button:hover {
-        background: linear-gradient(135deg, #1a5a9e 0%, #2578b8 100%);
-        box-shadow: 0 2px 8px rgba(30, 111, 191, 0.3);
+        background: linear-gradient(135deg, #3a7bc8 0%, #5a94d4 100%);
+        box-shadow: 0 4px 14px rgba(74, 144, 217, 0.35);
+        transform: translateY(-1px);
     }
 
     /* Botão secundário */
     .stButton > button[kind="secondary"] {
         background: white;
-        color: #1e6fbf;
-        border: 1.5px solid #1e6fbf;
+        color: #4a90d9;
+        border: 2px solid #4a90d9;
+        box-shadow: none;
     }
     .stButton > button[kind="secondary"]:hover {
-        background: #e8f0fa;
-    }
-
-    /* Cards e containers */
-    .stExpander {
-        background: white;
-        border: 1px solid #d8e4f0;
-        border-radius: 10px;
-    }
-    .stTabs [data-baseweb="tab"] {
-        color: #4a6a8a;
-        font-weight: 500;
-    }
-    .stTabs [aria-selected="true"] {
-        color: #1e6fbf;
-        font-weight: 600;
-        border-bottom: 2px solid #1e6fbf;
+        background: #f0f5fb;
     }
 
     /* Área de texto */
     .stTextArea textarea {
-        border: 1.5px solid #c8d8e8;
-        border-radius: 8px;
+        border: 2px solid #dde3ed;
+        border-radius: 14px;
         background: white;
+        font-size: 15px;
+        padding: 14px 18px;
+        transition: border-color 0.2s;
     }
     .stTextArea textarea:focus {
-        border-color: #1e6fbf;
-        box-shadow: 0 0 0 2px rgba(30, 111, 191, 0.1);
+        border-color: #4a90d9;
+        box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.12);
     }
 
-    /* Select e file uploader */
-    .stSelectbox > div > div {
-        border-radius: 8px;
-    }
+    /* File uploader */
     .stFileUploader {
-        background: #f0f5fb;
-        border: 1.5px dashed #a8c4e0;
-        border-radius: 10px;
-        padding: 1rem;
+        background: #fafbfd;
+        border: 2px dashed #c8d6e5;
+        border-radius: 14px;
+        padding: 1.2rem;
+        transition: all 0.2s;
+    }
+    .stFileUploader:hover {
+        border-color: #4a90d9;
+        background: #f5f8fc;
     }
 
-    /* Alertas coloridos */
-    .stSuccess { background-color: #e8f5e9; border-left: 4px solid #2e7d32; }
-    .stWarning { background-color: #fff8e1; border-left: 4px solid #f9a825; }
-    .stError   { background-color: #ffebee; border-left: 4px solid #c62828; }
-    .stInfo    { background-color: #e3f2fd; border-left: 4px solid #1e6fbf; }
+    /* Expanders */
+    .stExpander {
+        background: white;
+        border: 1px solid #e8ecf2;
+        border-radius: 14px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    /* Checkbox */
+    .stCheckbox label {
+        font-size: 15px;
+        color: #4a5568;
+    }
+
+    /* Alertas */
+    .stSuccess, .stWarning, .stError, .stInfo {
+        border-radius: 12px;
+        padding: 1rem 1.2rem;
+    }
+    .stWarning {
+        background-color: #fff8f0;
+        border-left: 5px solid #f0a040;
+        border-radius: 14px;
+    }
 
     /* Rodapé */
     .footer {
         text-align: center;
-        color: #7a8ea0;
-        font-size: 0.8rem;
-        padding: 1.5rem 0 0.5rem 0;
-        border-top: 1px solid #d8e4f0;
-        margin-top: 2rem;
+        color: #8a97a8;
+        font-size: 0.85rem;
+        padding: 2rem 0 0.8rem 0;
+        border-top: 1px solid #e8ecf2;
+        margin-top: 2.5rem;
+    }
+    .footer a {
+        color: #4a90d9;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Spinner */
+    .stSpinner {
+        color: #4a90d9;
+    }
+
+    /* Selectbox */
+    .stSelectbox > div > div {
+        border-radius: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -273,7 +320,7 @@ with st.expander("📋 Como preservar evidências e denunciar"):
 st.markdown("""
 <div class="footer">
     PsicologIA · v1.0 · Tecnologia DeepSeek (China) · Open source · 
-    <a href="https://github.com/MarcosCorse/PsicologIA" style="color: #1e6fbf;">GitHub</a>
+    <a href="https://github.com/MarcosCorse/PsicologIA">GitHub</a>
     <br>Esta ferramenta não substitui denúncia formal ao Conselho Regional de Psicologia.
 </div>
 """, unsafe_allow_html=True)
