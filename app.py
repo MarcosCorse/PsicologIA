@@ -213,14 +213,33 @@ st.markdown("""
 
     /* ── Banner decorativo ── */
     .banner {
-        background: #a8d4ea;
+        background: linear-gradient(135deg, #007aad 0%, #009DCF 40%, #4db8e0 100%);
         border-radius: 20px;
         padding: 2rem 2.5rem;
         margin-bottom: 1.5rem;
-        color: #003450;
-        border: 2px solid #007aad;
+        color: white;
         position: relative;
         overflow: hidden;
+    }
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -40px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 50%;
+    }
+    .banner::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        left: 20%;
+        width: 250px;
+        height: 250px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 50%;
     }
     .banner-text {
         position: relative;
@@ -237,21 +256,28 @@ col_logo, _ = st.columns([1, 1])
 with col_logo:
     st.image("assets/logo.png", use_container_width=True)
 
-st.caption("v2.2 — Banner harmonizado")
+st.caption("v2.3")
 
 st.divider()
+
+st.markdown(
+    '<p style="font-size: 18px; color: #0a1f3a; font-weight: 700; line-height: 1.6; text-align: justify; text-shadow: 1px 1px 0px rgba(180, 215, 240, 0.8);">'
+    "Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor "
+    "as informações apresentadas no perfil profissional? O PsicologIA ajuda você "
+    "a analisar dados como identificação, registro profissional, formação, títulos, "
+    "serviços oferecidos e formas de divulgação, sinalizando pontos que podem estar "
+    "em desacordo com as normas da Psicologia. A ferramenta é gratuita, de código "
+    "aberto e foi criada para tornar essa consulta mais simples e acessível, mesmo "
+    "para quem não conhece as regras da profissão."
+    '</p>',
+    unsafe_allow_html=True,
+)
 
 # ── Banner decorativo ─────────────────────────────────────────
 
 st.markdown("""
 <div class="banner">
     <p class="banner-text">
-        Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor
-        as informações apresentadas no perfil profissional? O <strong>PsicologIA</strong>
-        ajuda você a analisar dados como identificação, registro profissional, formação,
-        títulos, serviços oferecidos e formas de divulgação, sinalizando pontos que podem
-        estar em desacordo com as normas da Psicologia.
-        <br><br>
         <span class="badge badge-blue">Gratuito</span>
         <span class="badge badge-green">Open Source</span>
         <span class="badge badge-amber">IA · DeepSeek</span>
