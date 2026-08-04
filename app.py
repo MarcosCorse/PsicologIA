@@ -108,7 +108,8 @@ with col_logo:
 
 st.divider()
 
-st.caption(
+st.markdown(
+    '<p style="font-size: 16px; color: #3a4a5a; line-height: 1.6;">'
     "Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor "
     "as informações apresentadas no perfil profissional? O PsicologIA ajuda você "
     "a analisar dados como identificação, registro profissional, formação, títulos, "
@@ -116,6 +117,8 @@ st.caption(
     "em desacordo com as normas da Psicologia. A ferramenta é gratuita, de código "
     "aberto e foi criada para tornar essa consulta mais simples e acessível, mesmo "
     "para quem não conhece as regras da profissão."
+    '</p>',
+    unsafe_allow_html=True,
 )
 
 # ── Sidebar ──────────────────────────────────────────────────
