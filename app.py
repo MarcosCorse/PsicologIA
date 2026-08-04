@@ -27,6 +27,14 @@ st.markdown("""
             radial-gradient(circle at 40% 40%, rgba(45, 55, 240, 0.5) 0%, transparent 40%);
         background-attachment: fixed;
     }
+
+    /* Permite ver o fundo através do conteúdo principal */
+    .main .block-container {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 14px;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
     .main {
         padding: 1rem 2rem;
     }
