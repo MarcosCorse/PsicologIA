@@ -28,16 +28,15 @@ st.markdown("""
 
     /* Cartão principal flutuante */
     .main .block-container {
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.75);
         border-radius: 20px;
         padding: 2rem 2.5rem;
         margin: 1.2rem 1rem;
-        box-shadow: 0 8px 32px rgba(0, 40, 60, 0.12), 0 2px 8px rgba(0, 40, 60, 0.06);
     }
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #fafcfe 0%, #ffffff 100%);
+        background: #d8ecf6;
     }
     [data-testid="stSidebar"] .block-container {
         padding: 1.5rem 1rem;
@@ -74,8 +73,9 @@ st.markdown("""
 
     /* Textarea */
     .stTextArea textarea {
-        border: 1.5px solid #dfe7ef;
+        border: 1.5px solid #c5dded;
         border-radius: 14px;
+        background: #f6fafd;
         font-size: 15px;
         padding: 14px 18px;
         color: #1a202c;
@@ -130,17 +130,17 @@ st.markdown("""
 
     /* ── Cards ── */
     .card {
-        background: white;
+        background: #e8f4fa;
         border-radius: 16px;
         padding: 1.5rem 2rem;
         margin-bottom: 1.2rem;
-        border: 1px solid #e4eaf1;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border: 1px solid #c5e0f0;
+        box-shadow: 0 2px 8px rgba(0, 60, 100, 0.06);
     }
     .card-header {
         font-size: 1.1rem;
         font-weight: 600;
-        color: #1a202c;
+        color: #0d3b5c;
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -170,8 +170,8 @@ st.markdown("""
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        background: #e4eaf1;
-        color: #64748b;
+        background: #c5e0f0;
+        color: #0d3b5c;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -185,16 +185,16 @@ st.markdown("""
     .step-label {
         font-size: 0.78rem;
         font-weight: 500;
-        color: #64748b;
+        color: #4a7a9a;
     }
     .step.active .step-label {
-        color: #007aad;
+        color: #0d3b5c;
         font-weight: 600;
     }
     .step-line {
         width: 60px;
         height: 2px;
-        background: #e4eaf1;
+        background: #c5e0f0;
         margin-top: 17px;
     }
 
