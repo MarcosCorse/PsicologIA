@@ -213,33 +213,14 @@ st.markdown("""
 
     /* ── Banner decorativo ── */
     .banner {
-        background: linear-gradient(135deg, #007aad 0%, #009DCF 40%, #4db8e0 100%);
+        background: #a8d4ea;
         border-radius: 20px;
         padding: 2rem 2.5rem;
         margin-bottom: 1.5rem;
-        color: white;
+        color: #003450;
+        border: 2px solid #007aad;
         position: relative;
         overflow: hidden;
-    }
-    .banner::before {
-        content: '';
-        position: absolute;
-        top: -60px;
-        right: -40px;
-        width: 200px;
-        height: 200px;
-        background: rgba(255,255,255,0.08);
-        border-radius: 50%;
-    }
-    .banner::after {
-        content: '';
-        position: absolute;
-        bottom: -80px;
-        left: 20%;
-        width: 250px;
-        height: 250px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 50%;
     }
     .banner-text {
         position: relative;
@@ -256,7 +237,7 @@ col_logo, _ = st.columns([1, 1])
 with col_logo:
     st.image("assets/logo.png", use_container_width=True)
 
-st.caption("v2.1 — Cards azuis intensos")
+st.caption("v2.2 — Banner harmonizado")
 
 st.divider()
 
