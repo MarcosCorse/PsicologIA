@@ -17,7 +17,7 @@ st.markdown("""
 <style>
     /* Fundo geral com manchas de aquarela */
     .stApp {
-        background-color: #0009DC;
+        background-color: #0009DCF;
         background-image:
             radial-gradient(ellipse at 15% 10%, rgba(40, 50, 235, 0.65) 0%, transparent 55%),
             radial-gradient(ellipse at 85% 25%, rgba(20, 35, 225, 0.5) 0%, transparent 50%),
