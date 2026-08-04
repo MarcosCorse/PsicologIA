@@ -121,7 +121,10 @@ st.caption(
 # ── Sidebar ──────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("### 📍 Encontre o Conselho Regional")
+    st.markdown(
+        '<h3 style="color: #1a3a5c;">Ψ Encontre o Conselho Regional de Psicologia</h3>',
+        unsafe_allow_html=True,
+    )
 
     ufs = [""] + sorted(MAPA_ESTADOS.keys())
     uf_selecionada = st.selectbox(
