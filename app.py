@@ -36,7 +36,7 @@ st.markdown("""
 
     /* Sidebar */
     [data-testid="stSidebar"] {
-        background: #d8ecf6;
+        background: #c0dff2;
     }
     [data-testid="stSidebar"] .block-container {
         padding: 1.5rem 1rem;
@@ -130,17 +130,17 @@ st.markdown("""
 
     /* ── Cards ── */
     .card {
-        background: #e8f4fa;
+        background: #d0e8f5;
         border-radius: 16px;
         padding: 1.5rem 2rem;
         margin-bottom: 1.2rem;
-        border: 1px solid #c5e0f0;
-        box-shadow: 0 2px 8px rgba(0, 60, 100, 0.06);
+        border: 2px solid #009DCF;
+        box-shadow: 0 4px 16px rgba(0, 60, 100, 0.1);
     }
     .card-header {
         font-size: 1.1rem;
-        font-weight: 600;
-        color: #0d3b5c;
+        font-weight: 700;
+        color: #004466;
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -255,6 +255,8 @@ st.markdown("""
 col_logo, _ = st.columns([1, 1])
 with col_logo:
     st.image("assets/logo.png", use_container_width=True)
+
+st.caption("v2.0 — Cards · Banner · Passos · Badges")
 
 st.divider()
 
