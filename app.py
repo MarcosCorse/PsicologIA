@@ -109,9 +109,13 @@ with col_logo:
 st.divider()
 
 st.caption(
-    "Ferramenta gratuita e open source para orientação da sociedade. "
-    "Identifica possíveis incompatibilidades com as normas do CFP. "
-    "A decisão final sobre infrações éticas cabe exclusivamente aos Conselhos Regionais de Psicologia."
+    "Está pesquisando um psicólogo ou uma psicóloga e quer entender melhor "
+    "as informações apresentadas no perfil profissional? O PsicologIA ajuda você "
+    "a analisar dados como identificação, registro profissional, formação, títulos, "
+    "serviços oferecidos e formas de divulgação, sinalizando pontos que podem estar "
+    "em desacordo com as normas da Psicologia. A ferramenta é gratuita, de código "
+    "aberto e foi criada para tornar essa consulta mais simples e acessível, mesmo "
+    "para quem não conhece as regras da profissão."
 )
 
 # ── Sidebar ──────────────────────────────────────────────────
