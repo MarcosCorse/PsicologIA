@@ -24,8 +24,8 @@ st.markdown("""
     .main .block-container {
         background: rgba(255, 255, 255, 0.92);
         border-radius: 14px;
-        padding: 2rem;
-        margin-top: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 0.5rem;
     }
     .main {
         padding: 1rem 2rem;
@@ -157,9 +157,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header customizado
-col_logo, _ = st.columns([1, 3])
-with col_logo:
-    st.image("assets/logo.png", use_container_width=True)
+st.image("assets/logo.png", use_container_width=True)
 
 st.divider()
 
